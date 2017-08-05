@@ -5,6 +5,7 @@
   <title>{% block title %}{% endblock %}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
@@ -31,30 +32,33 @@
   </style>
   <!-- bokeh end -->
 
+
+  <!-- theme -->
+  <link rel="stylesheet" href="{% static 'firstpage/assets/css/style.css'%}" />
 </head>
 <body>
-  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+
+  <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-faded" style="background-color: #000d3d;">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="{% url 'firstpage:home'  %}">
-      <img src="{% static 'firstpage/bootstrap-solid.svg' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+      <!-- <img src="{% static 'firstpage/bootstrap-solid.svg' %}" width="30" height="30" class="d-inline-block align-top" alt=""> -->
+      <img src="https://avatars2.githubusercontent.com/u/30746691?v=4&s=70" width="30" height="30" class="d-inline-block align-top" alt="">
+
       1회차를이렇게끝낼순없어
     </a>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="{% url 'firstpage:home'  %}">Home <span class="sr-only">(current)</span></a>
-        </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="{% url 'firstpage:home'  %}">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/admin">Admin</a>
         </li>
       </ul>
       <span class="navbar-text">
-        인생 1회차 끝나기 전에 머신러닝 공부?
+        인생 1회차 끝내기 전에 머신러닝을 배우고 가렴!
       </span>
     </div>
   </nav>
@@ -64,5 +68,9 @@
   <br />
 
 {% block content %}{% endblock %}
+
+  <!-- <nav class="navbar fixed-bottom navbar-light bg-faded">
+  <a class="navbar-brand" href="#">Fixed bottom</a>
+  </nav> -->
 </body>
 </html>

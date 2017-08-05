@@ -10,8 +10,9 @@ from bokeh.resources import CDN
 from bokeh.embed import components
 
 def index(request):
-    algorithms = Algorithm.objects.all()
-    context = {'algorithms':algorithms}
+    supervised_algorithms = Algorithm.objects.filter(algorithm_type="supervised")
+    unsupervised_algorithms = Algorithm.objects.filter(algorithm_type="unsupervised")
+    context = {'supervised_algorithms':supervised_algorithms, 'unsupervised_algorithms':unsupervised_algorithms}
 
     return render(request, 'firstpage/index.html', context)
 
