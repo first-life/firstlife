@@ -1,0 +1,54 @@
+{% extends "firstpage/layout.html" %}
+{% load staticfiles %}
+{% block title %}
+{{algorithm}}
+{% endblock %}
+
+
+{% block content %}
+  <div class="container">
+    {% for algorithm in algorithms %}
+    <h1>{{algorithm.name}} (시각화페이지) </h1>
+    <div>
+      <a href="../../introductions/{{algorithm.name}}" class="btn btn-info" role="button" aria-pressed="true">Primary link</a>
+    </div>
+    {% endfor %}
+
+    <div>
+      <table class="table table-sm">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Feature 1</th>
+            <th>Feature 1</th>
+            <th>Y</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>2.3</td>
+            <td>3.2</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>2.3</td>
+            <td>3.4</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>2.3</td>
+            <td>3.4</td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div>
+        <img src="{% static 'firstpage/image.png' %}" class="img-fluid" alt="Responsive image">
+      </div>
+    </div>
+  </div>
+{% endblock %}

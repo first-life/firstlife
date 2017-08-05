@@ -1,0 +1,39 @@
+{% extends "firstpage/layout.html" %}
+{% block title %}
+{{introduction}}
+{% endblock %}
+
+
+{% block content %}
+  <div class="container">
+    {% for algorithm in algorithms %}
+    <h1>{{algorithm.name}} (알고리즘설명페이지) </h1>
+    <div class="row">
+      <div class="col">{{algorithm.introduction}}</div>
+      <div class="col">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="도움이되는 링크 등록">
+          <span class="input-group-btn">
+            <button class="btn btn-secondary" type="button">추가</button>
+          </span>
+        </div>
+        <br />
+        <div>
+          <h4>title</h4>
+          <p>
+            content
+          </p>
+          <h4>title</h4>
+          <p>
+            content
+          </p>
+          <h4>title</h4>
+          <p>
+            content
+          </p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+{% endblock %}
