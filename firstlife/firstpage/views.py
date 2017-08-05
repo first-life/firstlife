@@ -4,6 +4,11 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Algorithm
 
+# Bokeh
+from bokeh.plotting import figure
+from bokeh.resources import CDN
+from bokeh.embed import components
+
 def index(request):
     algorithms = Algorithm.objects.all()
     context = {'algorithms':algorithms}
@@ -12,6 +17,9 @@ def index(request):
 
 def algorithms(request, algorithm):
     algorithms = Algorithm.objects.filter(name=algorithm)
+
+    algorithm = algorithms[0]
+
     context = {'algorithms':algorithms}
 
     return render(request, 'firstpage/algorithm.html', context)
@@ -22,3 +30,7 @@ def introductions(request, introduction):
     # s += introduction
     return render(request, 'firstpage/introduction.html', context)
     # return HttpResponse(s)
+
+def chart(request):
+
+    return render(request, 'firstpage/chart.html')
