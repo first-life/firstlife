@@ -18,7 +18,7 @@ firstpage
       {% for algorithm in supervised_algorithms %}
       <div class="col-sm-4 text-center">
         <div class="text-center">
-          <img src="{% static 'firstpage/thum.svg' %}" class="rounded" alt="...">
+          <img src="{% static ""%}firstpage/assets/images/{{algorithm.name}}.png" class="img-fluid">
           <h4>
             <a class="algoritm-name" href="/algorithms/{{algorithm.name}}">{{algorithm.korname}}</a>
           </h4>
@@ -43,7 +43,7 @@ firstpage
       {% for algorithm in unsupervised_algorithms %}
       <div class="col-sm-4 text-center">
         <div class="text-center">
-          <img src="{% static 'firstpage/thum.svg' %}" class="rounded" alt="...">
+          <img src="{% static ""%}firstpage/assets/images/{{algorithm.name}}.png" class="img-fluid">
           <h4>
             <a class="algoritm-name" href="/algorithms/{{algorithm.name}}">{{algorithm.korname}}</a>
           </h4>

@@ -8,6 +8,15 @@ class Algorithm(models.Model):
     chartid = models.CharField(max_length=100)
     algorithm_type = models.CharField(max_length=40)
     introduction = models.TextField()
-
-    def __str__(self): # 이 부분 추가
+    datasetintro = models.TextField()
+    
+    def __str__(self):
         return self.name
+
+class Recommend(models.Model):
+    algorithm = models.ForeignKey(Algorithm)
+    address = models.CharField(max_length=100)
+    content = models.TextField()
+
+    def __str__(self):
+        return self.address

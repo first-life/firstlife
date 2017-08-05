@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.http import HttpResponse
-from .models import Algorithm
+from .models import Algorithm, Recommend
 
 def index(request):
     supervised_algorithms = Algorithm.objects.filter(algorithm_type="supervised")
@@ -14,7 +14,6 @@ def index(request):
 def algorithms(request, algorithm):
     algorithms = Algorithm.objects.filter(name=algorithm)
 
-    algorithm = algorithms[0]
 
     context = {'algorithms':algorithms}
 
