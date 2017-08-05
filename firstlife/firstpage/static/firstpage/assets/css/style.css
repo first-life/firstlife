@@ -1,26 +1,32 @@
 @import url(http://fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
 @import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
 @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+@import url(http://fonts.googleapis.com/earlyaccess/kopubbatang.css);
 
 body {
   padding-top: 70px;
 }
-h1, h2, h3 {
+h1, h2 {
   /*color: #FCA205;*/
   font-family: 'Jeju Gothic', serif;
 }
 
+h3, h4 {
+  /*color: #FCA205;*/
+  font-family: 'KoPub Batang', serif;
+}
+
 p {
-  font-family: 'Jeju Myeongjo', serif;
+  font-family: 'KoPub Batang', serif;
 }
 
 nav {
   /*font-family: 'Hanna', serif;*/
-  font-family: 'Jeju Gothic', serif;
+  font-family: 'KoPub Batang', serif;
 }
 
 a.algoritm-name{
-  font-family: 'Jeju Myeongjo', serif;
+  font-family: 'Jeju Gothic', serif;
   color: #000000;
   text-decoration: none;
 }
@@ -35,4 +41,8 @@ div.algorithm-name{
   padding-bottom: 25px;
   padding-left: 82px;
 
+}
+
+.badge {
+  font-family: 'Jeju Gothic', serif;
 }

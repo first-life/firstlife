@@ -12,10 +12,11 @@
 
     {% for algorithm in algorithms %}
     <div class="row algorithm-name">
-      <h1>{{algorithm.name}} <a class="badge badge-danger" href="/introductions/{{algorithm.name}}">더 알아보기</a></h1>
-      <!-- <h1>{{algorithm.name}} (시각화페이지) </h1>
-      <a href="../../introductions/{{algorithm.name}}" class="btn btn-info" role="button" aria-pressed="true">
-      알고리즘 설명</a> -->
+      <h1>
+        {{algorithm.korname}}({{algorithm.name}})
+        <a class="badge badge-danger" href="/introductions/{{algorithm.name}}">더 알아보기</a>
+      </h1>
+
     </div>
 
 
