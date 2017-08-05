@@ -4,11 +4,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Algorithm
 
-# Bokeh
-from bokeh.plotting import figure
-from bokeh.resources import CDN
-from bokeh.embed import components
-
 def index(request):
     supervised_algorithms = Algorithm.objects.filter(algorithm_type="supervised")
     unsupervised_algorithms = Algorithm.objects.filter(algorithm_type="unsupervised")
