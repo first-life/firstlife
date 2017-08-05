@@ -7,47 +7,71 @@
 
 {% block content %}
   <div class="container">
+
+
+
     {% for algorithm in algorithms %}
-    <h1>{{algorithm.name}} (시각화페이지) </h1>
-    <div>
-      <a href="../../introductions/{{algorithm.name}}" class="btn btn-info" role="button" aria-pressed="true">Primary link</a>
+    <div class="row">
+      <h1>{{algorithm.name}} (시각화페이지) <a class="badge badge-danger" href="/introductions/{{algorithm.name}}">?</a></h1>
+      <!-- <h1>{{algorithm.name}} (시각화페이지) </h1>
+      <a href="../../introductions/{{algorithm.name}}" class="btn btn-info" role="button" aria-pressed="true">
+      알고리즘 설명</a> -->
     </div>
     {% endfor %}
 
-    <div>
-      <table class="table table-sm">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Feature 1</th>
-            <th>Feature 1</th>
-            <th>Y</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>2.3</td>
-            <td>3.2</td>
-            <td>1</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>2.3</td>
-            <td>3.4</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>2.3</td>
-            <td>3.4</td>
-            <td>1</td>
-          </tr>
-        </tbody>
-      </table>
 
-      <div>
-        <img src="{% static 'firstpage/image.png' %}" class="img-fluid" alt="Responsive image">
+    <div class="row">
+      <div class="col col-md-6 col-sm-6">
+        <div class="row">
+          <p>데이터셋 설명</p>
+        </div>
+
+        <br />
+
+        <div class="row">
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Feature 1</th>
+                <th>Feature 1</th>
+                <th>Y</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>2.3</td>
+                <td>3.2</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>2.3</td>
+                <td>3.4</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>2.3</td>
+                <td>3.4</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+      <div class="col col-md-6 col-sm-6">
+        <!-- <img src="{% static 'firstpage/image.png' %}" class="img-fluid" alt="Responsive image"> -->
+        <!-- {{ the_div|safe }}
+
+        {{ the_script|safe }} -->
+        <div class="bk-root">
+            <div class="bk-plotdiv" id="732d5268-11f9-4700-b52e-41e3c7943682"></div>
+        </div>
+
+        <script type="text/javascript" src="{% static 'firstpage/chartsc.js' %}">흑흑</script>
       </div>
     </div>
   </div>
