@@ -38,11 +38,11 @@
 </head>
 <body>
 
-  <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-faded" style="background-color: #000d3d;">
+  <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-faded" style="background-color: #f8f8f8">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="{% url 'firstpage:home'  %}">
+    <a class="navbar-brand" href="{% url 'firstpage:home'  %}" style="color:#2f59a3">
       <!-- <img src="{% static 'firstpage/bootstrap-solid.svg' %}" width="30" height="30" class="d-inline-block align-top" alt=""> -->
       <img src="https://avatars2.githubusercontent.com/u/30746691?v=4&s=70" width="30" height="30" class="d-inline-block align-top" alt="">
 
@@ -51,14 +51,14 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'firstpage:home'  %}">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="{% url 'firstpage:home'  %}" style="color:#2f59a3">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/admin">Admin</a>
+          <a class="nav-link" href="/admin" style="color:#2f59a3">Admin</a>
         </li>
       </ul>
-      <span class="navbar-text">
-        인생 1회차 끝내기 전에 머신러닝을 배우고 가렴!
+      <span class="navbar-text" style="color:#2f59a3">
+        <!-- 인생 1회차 끝내기 전에 머신러닝을 배우고 가렴! -->
       </span>
     </div>
   </nav>
