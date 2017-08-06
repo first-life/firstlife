@@ -44,6 +44,12 @@ div.algorithm-name{
 
 }
 
+footer{
+
+  padding-bottom: 50px;
+}
+
+
 .badge {
   font-family: 'Jeju Gothic', serif;
 }
@@ -69,6 +75,11 @@ div.algorithm-name{
 }
 
 .badge-danger{
-  background-color: #f5a17d;
-  margin-left: 20px;
+  background-color: #DB5758;
+  margin-left: 50px;
+}
+
+.badge-success{
+  background-color: #DB5758;
+  margin-left: 50px;
 }

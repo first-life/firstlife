@@ -21,7 +21,7 @@
 
     {% for algorithm in algorithms %}
     <div class="algorithm-name">
-      <h1>
+      <h1 style="color:#f8f8f8">
         {{algorithm.korname}}({{algorithm.name}})
         <a class="badge badge-success" href="/algorithms/{{algorithm.name}}">시각화</a>
       </h1>
@@ -34,7 +34,7 @@
         </p>
       </div>
 
-      <div class="col col-sm-6">
+    <!--   <div class="col col-sm-6">
         <div class="input-group">
           <input type="text" class="form-control" placeholder="도움이되는 링크 등록">
           <span class="input-group-btn">
@@ -56,7 +56,8 @@
             content
           </p>
         </div>
-      </div>
+      </div> -->
+
     </div>
 
     {% endfor %}
